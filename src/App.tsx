@@ -13,14 +13,22 @@ function App() {
     }
   }, [title, totalPages, setGoal]);
   return (
-    <div>
-      <input type="text" ref={title}></input>
-      <input type="number" ref={totalPages}></input>
-      <button onClick={addGoal}>Add Goal</button>
+    <div className="flex p-5 h-screen">
+      <input
+        className="border-black border mr-2"
+        type="text"
+        ref={title}
+      ></input>
+      <input
+        className="border-black border mr-2"
+        type="number"
+        ref={totalPages}
+      ></input>
+      <button onClick={addGoal}>set goal</button>
 
       {goal && (
         <>
-          <div>{goal.title}</div>
+          <div className="mr-4">{goal.title}</div>
           <div>{goal.totalPages}</div>
         </>
       )}
