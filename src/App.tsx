@@ -13,14 +13,14 @@ function App() {
     }
   }, [title, totalPages, setGoal]);
   return (
-    <div className="flex p-5 h-screen">
+    <div className="flex h-screen p-5">
       <input
-        className="border-black border mr-2"
+        className="border border-black mr-2"
         type="text"
         ref={title}
       ></input>
       <input
-        className="border-black border mr-2"
+        className="border border-black mr-2"
         type="number"
         ref={totalPages}
       ></input>
@@ -28,7 +28,7 @@ function App() {
 
       {goal && (
         <>
-          <div className="mr-4">{goal.title}</div>
+          <div className="mr-4 zz">{goal.title}</div>
           <div>{goal.totalPages}</div>
         </>
       )}
